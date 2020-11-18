@@ -1,0 +1,22 @@
+﻿<Window x:Class="FontsTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FontsTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Height="24" Width="100" Content="打开" Click="_OnClicked"/>
+        <TextBox x:Name="TB_Box" Grid.Column="1" TextChanged="_OnTextChanged" AcceptsReturn="True"/>
+        <local:TestVisual x:Name="TV_Visual" Grid.Row="1" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
