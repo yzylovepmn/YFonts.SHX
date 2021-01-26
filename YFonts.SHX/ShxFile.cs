@@ -12,6 +12,16 @@ namespace YFonts.SHX
     public sealed class ShxFile : IDisposable
     {
         public const double DEFAULTSIZE = 12;
+        private const string ResourcePrefix = "YFonts.SHX.Resources.";
+
+        public static ShxFile AsciiFile;
+        public static ShxFile CHSFile;
+
+        static ShxFile()
+        {
+            AsciiFile = Load(Resources.OpenStream(ResourcePrefix, "simplex.shx"));
+            CHSFile = Load(Resources.OpenStream(ResourcePrefix, "hztxt.shx"));
+        }
 
         public static ShxFile Load(string fileFullName)
         {

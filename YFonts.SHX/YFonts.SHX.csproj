@@ -48,6 +48,7 @@
     <Compile Include="FontFile.cs" />
     <Compile Include="PolyLine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Resources.cs" />
     <Compile Include="Shapes\ShapeFontFile.cs" />
     <Compile Include="Shapes\ShapeIndexItem.cs" />
     <Compile Include="ShxFile.cs" />
@@ -56,6 +57,9 @@
     <Compile Include="UniFont\UniFontFile.cs" />
     <Compile Include="UniFont\UniFontIndexItem.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\hztxt.shx" />
+    <EmbeddedResource Include="Resources\simplex.shx" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
